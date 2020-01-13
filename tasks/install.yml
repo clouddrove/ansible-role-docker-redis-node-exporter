@@ -16,12 +16,6 @@
     owner: root
     group: root
 
-- name: Install redis exporter tools
-  apt:
-    name: redis-exporter-tools
-    state: present
-    update_cache: true
-
 - name: restart redis exporter service is restarted
   service:
     name: redis_exporter

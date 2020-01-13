@@ -2,11 +2,11 @@
 
 - name: setup group
   group:
-     name: "{{ redis_exported_group }}"
+     name: "{{ redis_exporter_group }}"
      system: false
 
 - name: setup user
   user:
-     name: "{{ redis_exported_user }}"
+     name: "{{ redis_exporter_user }}"
      system: false
-     group: "{{ redis_exported_group }}"
+     group: "{{ redis_exporter_group }}"
