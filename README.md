@@ -94,7 +94,6 @@ Followiing things includes in this role:
 ## Variables
 
 ```yaml
-  redis_version: "5.0.3"
   redis_exporter_user: redis_exporter
   redis_exporter_group: redis_exporter
   mount_path: /data
