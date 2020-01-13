@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -eux -o pipefail
+
+# pull the image before so we dont first remove the container and then pull
+docker pull oliver006/redis_exporter:"{{ redis_exporter_version }}"
+
+docker rm -f -v redis_exporter || :
+
+docker run -d --rm --name=redis_exporter \
+	-p 9121:"{{ redis_exporter_server_port }}" \
+   oliver006/redis_exporter:"{{ redis_exporter_version }}"

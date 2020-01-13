@@ -1,0 +1,16 @@
+---
+# redis version
+redis_version: "5.0.3"
+
+# Users & groups
+redis_exporter_user: redis_exporter
+redis_exporter_group: redis_exporter
+
+# Configurations
+mount_path: /data
+
+# Networking/connection options
+redis_exporter_server_port: 9121
+redis_exporter_server_password: false
+
+redis_exporter_version: latest

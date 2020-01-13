@@ -1,0 +1,9 @@
+[Unit]
+Description=redis exporter Server
+
+[Service]
+TimeoutStartSec=0
+Restart=always
+ExecStart=/usr/local/bin/redis_exporter
+[Install]
+WantedBy=multi-user.target

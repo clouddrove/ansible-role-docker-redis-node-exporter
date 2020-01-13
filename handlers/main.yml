@@ -1,0 +1,20 @@
+---
+# handlers for ansible-role-docker-redis_exporter
+
+- name: restart redis_exporter
+  service:
+    name: redis_exporter
+    state: restarted
+    enabled: true
+
+- name: start redis_exporter
+  service:
+    name: redis_exporter
+    state: started
+    enabled: true
+
+- name: reload redis_exporter
+  service:
+    name: redis_exporter
+    state: reloaded
+    enabled: true
