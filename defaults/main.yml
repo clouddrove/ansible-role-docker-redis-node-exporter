@@ -1,13 +1,12 @@
 ---
-# Users & groups
-redis_exporter_user: redis_exporter
-redis_exporter_group: redis_exporter
 
 # Configurations
 mount_path: /data
 
 # Networking/connection options
 redis_exporter_server_port: 9121
+redis_exporter_server_bind: 0.0.0.0
+
 redis_exporter_server_password: false
 
-redis_exporter_version: latest
+redis_exporter_version: v1.3.5

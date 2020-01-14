@@ -21,3 +21,12 @@
     name: redis_exporter
     state: restarted
   changed_when: false
+
+- name: wait for redis exporter to become ready
+  wait_for:
+    host: "{{ redis_exporter_server_bind }}"
+    port: "{{ redis_exporter_server_port }}"
+    state: started
+    delay: 5
+    connect_timeout: 15
+    timeout: 300
