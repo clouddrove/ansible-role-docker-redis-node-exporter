@@ -9,4 +9,6 @@ docker rm -f -v redis_exporter || :
 
 docker run -u root  --rm --name=redis_exporter \
 	-p 9121:"{{ redis_exporter_server_port }}" \
+	-e REDIS_ADDR='{{ redis_server_addr }}' \
+	-e REDIS_PASSWORD='{{ redis_server_password }}' \
    oliver006/redis_exporter:"{{ redis_exporter_version }}-alpine"
