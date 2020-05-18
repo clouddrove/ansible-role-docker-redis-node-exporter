@@ -67,7 +67,7 @@ This module has a few dependencies:
 
 ## What Includes
 
-Followiing things includes in this role:
+Following things includes in this role:
 
 - redis-node-exporter
 
@@ -96,11 +96,8 @@ Followiing things includes in this role:
 ```yaml
   redis_exporter_server_port: 9121
   redis_exporter_server_bind: 0.0.0.0
-
   redis_exporter_server_password: false
-
   redis_exporter_version: v1.3.5
-
   redis_server_port: 6379
   redis_server_password: ''
   redis_server_addr: "redis://{{ PublicIp }}:{{ redis_server_port }}"
